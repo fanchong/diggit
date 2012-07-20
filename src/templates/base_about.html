@@ -1,0 +1,50 @@
+{% extends "master.html" %}
+
+{% block body %}
+<body>
+{{ modules.Header() }}
+<div id="AboutContainer">
+  <div id="AboutContent">
+    <div id="AboutLeft">
+      <ul>
+        <li>
+          <a class="selected loaded" href="/about">
+            <span>关于我们</span>
+            <span class="pointer normal"></span>
+            <span class="pointer hover"></span>
+          </a>
+        </li>
+        <li>
+          <a href="/about/help">
+            <span>帮助</span>
+            <span class="pointer normal"></span>
+            <span class="pointer hover"></span>
+          </a>
+        </li>
+        <li>
+          <a href="/about/term">
+            <span>开发团队</span>
+            <span class="pointer normal"></span>
+            <span class="pointer hover"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="AboutRight">
+	  {% block canvas %}{% end %}
+	</div>
+  </div>
+</div>
+<div class="clear"></div>
+<div id="footer">
+  <div class="HeaderContainer">
+	<p>&copy; 2012 Tozuo 京ICP备12018208号-2</p>
+  </div>
+</div>
+<script type="text/javascript">
+  var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd8591a3eef4c9dc9e2ef10bd06275d3a' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+{% end %}
