@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block canvas %}
-<h1 id="login_logo"><a href="/">登录TOZUO</a></h1>
+<h1 id="login_logo"><a href="/">Login Diggit</a></h1>
 <img alt="Horizontal Rule" src="{{ static_url("images/login_bar.png") }}" class="login_bar"/>
 {% if error %}
-<p style="text-align: center;" class="error">很抱歉，我们不能验证您的邮箱地址和密码。</p>
+<p style="text-align: center;" class="error">Error</p>
 {% end %}
 <form accept-charset="utf-8" method="POST" action="/login" class="Form FancyForm AuthForm">
   <ul>
@@ -21,9 +21,9 @@
 	{{ xsrf_form_html() }}
   </ul>
   <div class="non_inputs">
-    <a onclick="$('.AuthForm').submit(); return false" class="Button WhiteButton Button13" href="#"><strong>登录</strong><span></span></a>
-    <!--<a href="#" class="colorless" id="resetPassword">忘记密码？</a>
-    <a href="#" class="colorless" id="backToLogin">重新登录？</a>-->
+    <a onclick="$('.AuthForm').submit(); return false" class="Button WhiteButton Button13" href="#"><strong>Login</strong><span></span></a>
+    <!--<a href="#" class="colorless" id="resetPassword">Forget password?</a>
+    <a href="#" class="colorless" id="backToLogin">Back to Login</a>-->
   </div>
 </form>
 {% end %}

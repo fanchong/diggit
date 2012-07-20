@@ -6,27 +6,27 @@
 	{% if current_user and current_user["_id"] != user["_id"] %}
 	{% if not user["ifollow"] %}
 	<a class="Button13 Button WhiteButton" href="javascript:void(0)" onclick="do_follow({{ user["_id"] }}, this)">
-	  <strong>关注</strong><span></span>
+	  <strong>Follow</strong><span></span>
 	</a>
 	{% else %}
 	<a class="Button13 Button WhiteButton disabled" href="javascript:void(0)" 
 	   onclick="do_follow({{ user["_id"] }}">
-	  <strong>取消关注</strong><span></span>
+	  <strong>Unfollow</strong><span></span>
 	</a>
 	{% end %}
 	{% elif not current_user %}
 	<a class="Button13 Button WhiteButton" href="{{ "/login?next=%s" % url_escape(request.uri) }}">
-	  <strong>关注</strong><span></span>
+	  <strong>Follow</strong><span></span>
 	</a>
 	{% end %}
   </div>
   <div class="PersonInfo">
     <h4><a href="/user/{{ user["_id"] }}">{{ user["name"] }}</a></h4>
     <div class="stats">
-      <a href="/user/{{ user["_id"] }}">{{ user["entries"] }}图片</a> ·
-      <a href="/user/{{ user["_id"] }}?filter=likes">{{ user["likes"] }}喜欢</a> ·
-      <a href="/user/{{ user["_id"] }}/followers">{{ user["followers"] }}粉丝</a> ·
-      <a href="/user/{{ user["_id"] }}/friends">{{ user["friends"] }}关注</a>
+      <a href="/user/{{ user["_id"] }}">{{ user["entries"] }} images</a> ·
+      <a href="/user/{{ user["_id"] }}?filter=likes">{{ user["likes"] }} likes</a> ·
+      <a href="/user/{{ user["_id"] }}/followers">{{ user["followers"] }} followers</a> ·
+      <a href="/user/{{ user["_id"] }}/friends">{{ user["friends"] }} funs</a>
     </div>
     <div class="icons">
     </div>

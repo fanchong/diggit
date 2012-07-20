@@ -2,14 +2,14 @@
 
 {% block sidebar %}
 {{ modules.UserItem(current_user, followed=None) }}
-<div class="box userinfo">评论动态显示图片最新评论、图片被谁喜欢、新粉丝。</div>
+<div class="box userinfo">Your notices</div>
 <div class="operbox">
   <ul>
 	<li>
-	  <a id="ajax_ev" class="i_set" href="/tip/1/do_cmtx">关闭评论提醒</a>
+	  <a id="ajax_ev" class="i_set" href="/tip/1/do_cmtx">Close</a>
 	</li>
 	<li>
-	  <a href="/tips" class="i_cmt">查看全部消息</a>
+	  <a href="/tips" class="i_cmt">Check all notices</a>
 	</li>
 	<div class="clear"></div>
   </ul>
@@ -20,7 +20,7 @@
 {% block canvas %}
 <div id="content">
   <div class="pageheader">
-	<h2>评论动态</h2>
+	<h2>Feeds</h2>
   </div>
   <div class="clear"></div>
   <div class="catalog">
@@ -30,7 +30,7 @@
 	{% end %}
 	{% else %}
 	<div class="notice">
-	  <p>最近没有消息。</p>
+	  <p>No notice</p>
 	</div>
 	{% end %}
   </div>

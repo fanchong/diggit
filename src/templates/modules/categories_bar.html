@@ -3,9 +3,9 @@
 	<li class="submenu">
 	  {% set category = handler.get_argument("category", None) %}
 	  {% if category and category.isdigit() %}
-	  <a class="nav selected" href="/all">所有分类<span></span></a>&nbsp;·
+	  <a class="nav selected" href="/all">Categories<span></span></a>&nbsp;·
 	  {% else %}
-	  <a class="nav" href="/">所有分类<span></span></a>&nbsp;·
+	  <a class="nav" href="/">All categories<span></span></a>&nbsp;·
 	  {% end %}
 	  <ul id="CategoriesDropdown">
         <li>
@@ -32,13 +32,13 @@
       </ul>
 	</li>
 	{% if current_user %}
-	<li><a class="nav" href="/user/{{ current_user["_id"] }}?filter=likes">你的喜欢</a>&nbsp;·</li>
-	<li><a class="nav" href="/user/{{ current_user["_id"] }}">你的上传</a>&nbsp;·</li>
+	<li><a class="nav" href="/user/{{ current_user["_id"] }}?filter=likes">Your likes</a>&nbsp;·</li>
+	<li><a class="nav" href="/user/{{ current_user["_id"] }}">Your Images</a>&nbsp;·</li>
 	{% end %}
 	{% set tags = handler.get_tags(0, 10) %}
 	{% if tags and len(tags) %}
 	<li class="submenu">
-	  <a class="nav" href="#">热门标签<span></span></a>
+	  <a class="nav" href="#">Hot tags<span></span></a>
 	  <ul>
 		{% for tag in tags %}
 		<li><a href="/search?q={{ tag["_id"] }}">{{ tag["_id"] }}</a></li>

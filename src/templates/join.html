@@ -10,7 +10,7 @@
   <ul>
 	<li>
       <input type="text" name="name" id="id_name" value="{{ name }}">
-      <label>昵称</label>
+      <label>Name</label>
       <span class="fff"></span>
     </li>
     <li>
@@ -20,14 +20,14 @@
     </li>
     <li>
       <input type="password" name="password" id="id_password">
-      <label>密码</label>
+      <label>Password</label>
       <span class="fff"></span>
     </li>
     {{ xsrf_form_html() }}
   </ul>
   <div class="non_inputs">
-    <a onclick="$('.AuthForm').submit(); return false" class="Button WhiteButton Button13" href="#"><strong>注册</strong><span></span></a>
-    <!--<a href="#" class="colorless" id="backToLogin">返回登录</a>-->
+    <a onclick="$('.AuthForm').submit(); return false" class="Button WhiteButton Button13" href="#"><strong>Join</strong><span></span></a>
+    <!--<a href="#" class="colorless" id="backToLogin">Back to login</a>-->
   </div>
 </form>
 {% end %}

@@ -4,11 +4,11 @@
       <div class="right">
 		{% if current_user %}
 		<a class="Button Button11 WhiteButton" href="javascript:void(0)" onclick="commentIt({{ entry["_id"] }})">
-          <strong><em></em>评论</strong><span></span>
+          <strong><em></em>Reply</strong><span></span>
         </a>
 		{% else %}
         <a class="Button Button11 WhiteButton" href="{{ "/login?next=%s" % url_escape(request.uri) }}">
-          <strong><em></em>评论</strong><span></span>
+          <strong><em></em>Reply</strong><span></span>
         </a>
 		{% end %}
       </div>
@@ -16,16 +16,16 @@
 		{% if current_user %}
 		{% if entry["iliked"] %}
 		<a class="Button Button11 WhiteButton disabled" href="javascript:void(0)" onclick="do_fav({{ entry["_id"] }}, this)">
-          <strong><em></em>取消喜欢</strong><span></span>
+          <strong><em></em>Unlike</strong><span></span>
 		</a>
 		{% else %}
 		<a class="Button Button11 WhiteButton" href="javascript:void(0)" onclick="do_fav({{ entry["_id"] }}, this)">
-          <strong><em></em>喜欢</strong><span></span>
+          <strong><em></em>Like</strong><span></span>
 		</a>
 		{% end %}
 		{% else %}
 		<a href="{{ "/login?next=%s" % url_escape(request.uri) }}" class="Button Button11 WhiteButton">
-		  <strong><em></em>喜欢</strong><span></span>
+		  <strong><em></em>Like</strong><span></span>
 		</a>
 		{% end %}
       </div>
@@ -36,8 +36,8 @@
   </div>
   <p class="description">{{ entry["title"] }}</p>
   <p class="stats colorless">
-	<span class="LikesCount">{{ entry["likes"] }} 喜欢&nbsp;&nbsp;</span>
-	<span class="CommentsCount">{{ entry["comments"] }} 评论&nbsp;&nbsp;</span>
+	<span class="LikesCount">{{ entry["likes"] }} Like&nbsp;&nbsp;</span>
+	<span class="CommentsCount">{{ entry["comments"] }} Reply&nbsp;&nbsp;</span>
   </p>
   <div class="convo attribution clearfix">
     <a class="ImgLink" title="{{ entry["user"]["name"] }}" href="/user/{{ entry["user"]["_id"] }}">
@@ -47,7 +47,7 @@
 	  <a title="{{ entry["user"]["name"] }}" href="/user/{{ entry["user"]["_id"] }}">
 		{{ entry["user"]["name"] }}
       </a>
-      {{ handler.date_format(entry["published"]) }}上传
+      {{ handler.date_format(entry["published"]) }} uploaded.
     </p>
   </div>
   <div class="comments colormuted" id="comments{{ entry["_id"] }}">
@@ -61,7 +61,7 @@
     </div>
 	{% end %}
 	{% if len(entry["comment_list"]) > 5%}
-	<a class="all comment convo clearfix" href="/item/{{ entry["_id"] }}">共 <span>{{ entry["comments"] }}</span> 评论…</a>
+	<a class="all comment convo clearfix" href="/item/{{ entry["_id"] }}">All <span>{{ entry["comments"] }}</span> replies</a>
 	{% end %}
 	{% end %}
   </div>

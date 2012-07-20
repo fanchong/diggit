@@ -22,11 +22,11 @@ $(document).ready(function() {
   </div>
   <div id="LoadingPins">
 	<img alt="Pin Loader Image" src="{{ static_url("images/BouncingLoader.gif") }}"/>
-	<span>正在加载...</span>
+	<span>loading...</span>
   </div>
   <div id="pager" style="display: none;">
 	<a class='Button Button13 WhiteButton' href='{{ "/user/%s?p=%s" % (user["_id"], p+1) if filter != "likes" else "/user/%s?filter=%s&p=%s" % (user["_id"], filter, p+1) }}'>
-	  <strong> 更多... </strong><span></span>
+	  <strong> More... </strong><span></span>
 	</a>
   </div>
   <input id="p" type="hidden" value="{{ p }}">
