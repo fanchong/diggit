@@ -77,7 +77,7 @@ class Application(tornado.web.Application):
             static_path=os.path.join(os.path.dirname(__file__), "static"),
             xsrf_cookies=False,
             cookie_secret="11oETzKXQAGaYdkL5gEmGeJJFuYh7EQnp2XdTP1o/Vo=",
-            blade_title="左左 - 轻博客社区",
+            diggit_title="Diggit",
             login_url="/login",
             autoescape=None,
             ui_modules=ui_modules,

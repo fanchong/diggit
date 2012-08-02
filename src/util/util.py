@@ -17,8 +17,8 @@ class Email(object):
     _smtp_server = 'smtp.sina.net'
     _smtp_port = '25' 
     _smtp_user = 'xueming@top100.cn'  
-    _smtp_password = 'top100'
-    _receivers = ["zhanghongjiang@top100.cn", "luowei@top100.cn"]
+    _smtp_password = ''
+    _receivers = ["daydayfree@gmail.com", "daydayfree@hotmail.com"]
 
     @staticmethod
     def send(content):
