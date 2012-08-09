@@ -12,12 +12,12 @@ define("port", default=8888, help="run on the given port", type=int)
 
 define("upload_url", "http://192.168.1.101:8080/upload")
 
-define("weibo_consumer_key", default="79686517")
-define("weibo_consumer_secret", default="46b1efa2ee2f10ea1753fab3ba458d5e")
-define("qq_consumer_key", default="801096787")
-define("qq_consumer_secret", default="9dd7d7787e9190ffe1c80a4026027b0e")
-define("renren_key", default="dc8daeac22e0450ab4e16c3ae9ed0c22")
-define("renren_secret", default="4b0fd5985da54fd58ab0ffea8af03c82")
+define("weibo_consumer_key", default="")
+define("weibo_consumer_secret", default="")
+define("qq_consumer_key", default="")
+define("qq_consumer_secret", default="")
+define("renren_key", default="")
+define("renren_secret", default="")
 
 
 class Application(tornado.web.Application):
