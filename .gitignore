@@ -11,3 +11,4 @@ upload
 upload/*
 upload_tmp
 upload_tmp/*
+.DS_Store
