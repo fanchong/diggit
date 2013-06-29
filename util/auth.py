@@ -3,15 +3,12 @@
 from tornado import httpclient
 from tornado import escape
 from tornado.httputil import url_concat
-from tornado.auth import OAuthMixin,OAuth2Mixin, _oauth_signature
+from tornado.auth import OAuthMixin, OAuth2Mixin, _oauth_signature
 import urllib
 import logging
 import time
-import base64
 import binascii
-import cgi
 import hashlib
-import hmac
 import urlparse
 import uuid
 
